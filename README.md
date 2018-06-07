@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-# tiny_evm
-Tiny EVM - test assignment for the Mana project (https://github.com/poanetwork/mana) candidates
-=======
-# TinyEvm
+# Tiny EVM
 
-**TODO: Add description**
+Tiny EVM - test assignment for the Mana project (https://github.com/poanetwork/mana) candidates
 
 ## Installation
 
@@ -23,4 +19,3 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/tiny_evm](https://hexdocs.pm/tiny_evm).
 
->>>>>>> add new project with common tests submodule
