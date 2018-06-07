@@ -19,7 +19,8 @@ defmodule TinyEvm.MixProject do
 
   defp deps do
     [
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:merkle_patricia_tree, "~> 0.2.7"}
     ]
   end
 end
