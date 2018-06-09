@@ -7,7 +7,9 @@ defmodule TinyEVMTest do
   @common_tests_path "./test/support/ethereum_common_tests/VMTests/"
 
   @tests [
-    "vmArithmeticTest/mulmod1_overflow4.json"
+    "vmArithmeticTest/mulmod1_overflow4.json",
+    "vmPushDupSwapTest/swap14.json",
+    "vmBitwiseLogicOperation/xor2.json"
   ]
 
   test "runs common test" do
