@@ -1,20 +1,29 @@
-defmodule TinyEvmTest do
+defmodule TinyEVMTest do
   use ExUnit.Case
-  doctest TinyEvm
+  doctest TinyEVM
+
+  alias TinyEVM.EthTest
 
   @common_tests_path "./test/support/ethereum_common_tests/VMTests/"
 
-  test "runs common test" do
-    # test = read_test_file("vmArithmeticTest/sub4.json")
+  @tests [
+    "vmArithmeticTest/mulmod1_overflow4.json"
+  ]
 
-    # TODO: assert test
+  test "runs common test" do
+    @tests
+    |> Enum.map(&read_test_file/1)
+    |> Enum.each(fn test ->
+      {remaining_gas, storage} = TinyEVM.execute(test.input.address, test.input.gas, test.input.code)
+
+      assert remaining_gas == test.output.gas
+      assert test.output.storage[test.input.address] == storage[test.input.address]
+    end)
   end
 
   defp read_test_file(file_name) do
-    {:ok, file} = File.open(@common_tests_path <> file_name)
+    file_path = @common_tests_path <> file_name
 
-    file
-    |> IO.read(:all)
-    |> Poison.decode!()
+    EthTest.read(file_path)
   end
 end

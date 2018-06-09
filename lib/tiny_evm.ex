@@ -1,18 +1,5 @@
-defmodule TinyEvm do
-  @moduledoc """
-  Documentation for TinyEvm.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> TinyEvm.hello
-      :world
-
-  """
-  def hello do
-    :world
+defmodule TinyEVM do
+  def execute(_address, _gas, _code) do
+    {0, %{}}
   end
 end
