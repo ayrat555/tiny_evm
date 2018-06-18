@@ -23,3 +23,5 @@ What to do:
 3. You read description of [EVM Tests](http://ethereum-tests.readthedocs.io/en/latest/test_types/vm_tests.html)
 4. You implement a simple interpreter and check against tests (only values that we check in tests are remaining gas and acoount's storage after code execution).
 5. You send your solution to us.
+
+The main task is to understand how EVM works because in this position you'll be working on much more complex version of EVM.
